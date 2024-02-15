@@ -14,21 +14,9 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        public int DieValue { get; set; }
 
 
         //Method
-        public int Roll()
-        {
-            Random random = new Random();
-            DieValue = random.Next(1, 7);
-            return DieValue;
-        }
-
-
-
-
-
 
 
     }

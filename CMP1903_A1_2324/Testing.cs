@@ -16,32 +16,5 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-        public Testing()
-        {
-            Console.WriteLine("Testing Class");
-            Die die = new Die();
-            int dieValue = die.Roll();
-            Console.WriteLine("Die Value: " + dieValue);
-            if (dieValue >= 1 && dieValue <= 6)
-            {
-                Console.WriteLine("Die Value is within range");
-            }
-            else
-            {
-                Console.WriteLine("Die Value is not within range");
-            }
-            Game game = new Game();
-            Console.WriteLine("Total: " + game.Total());
-            if (game.Total() >= 3 && game.Total() <= 18)
-            {
-                Console.WriteLine("Total is within range");
-            }
-            else
-            {
-                Console.WriteLine("Total is not within range");
-            }
-            //test
-
-        }
     }
 }
