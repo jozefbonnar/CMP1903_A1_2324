@@ -27,7 +27,6 @@ namespace CMP1903_A1_2324
             Console.WriteLine("-----------------------------\nTesting the Game and Die classes\n");
             TestDieRoll();
             TestGameRollDice();
-            TestGameTotal();
             TestStatistics();
             Console.ReadLine();
         }
@@ -72,26 +71,6 @@ namespace CMP1903_A1_2324
             }
         }
 
-        /// <summary>
-        /// Test the Game class Total method
-        /// </summary>
-        private void TestGameTotal()
-        {
-            Console.WriteLine("Testing the Game class: Total");
-            Game game = new Game();
-            int[] TestData = new int[] { 1, 2, 3 };
-            int result = game.Total(TestData);
-            Debug.Assert(result == 6, "The total of the array is not 6");
-            Console.WriteLine("The total of the array is: " + result);
-            if (result == 6)
-            {
-                Console.WriteLine("Test Passed: The total of the array is 6");
-            }
-            else
-            {
-                Console.WriteLine("Test Failed: The total of the array is not 6");
-            }
-        }
         /// <summary>
         /// Test the Game class statistics method
         /// </summary>

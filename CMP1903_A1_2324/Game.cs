@@ -40,15 +40,6 @@ namespace CMP1903_A1_2324
             return diceValues;
         }
 
-        /// <summary>
-        /// It will take an array of integers and return the sum of the integers
-        /// </summary>
-        /// <param name="ints"></param>
-        /// <returns></returns>
-        public int Total(int[] ints)
-        {
-            return ints.Sum();
-        }
 
         /// <summary>
         /// It rolls the dice, calculates the sum of the dice and also the statistics of the rolls
@@ -69,7 +60,7 @@ namespace CMP1903_A1_2324
                     statistics[value - 1]++;
                 }
 
-                int total = Total(diceValues);
+                int total = diceValues.Sum(); //sum the values of the dice
 
                 Console.WriteLine();
                 Console.WriteLine("The total of the three dice rolls is: " + total);
