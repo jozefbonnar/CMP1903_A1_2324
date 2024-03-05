@@ -23,8 +23,8 @@ namespace CMP1903_A1_2324
         {
             RollDie();
         } //Constructor to create a new Die object
-        public int DieValue { get; private set; } //Property to hold the current die value
-        private static Random rnd = new Random(); //Random object to generate random numbers
+        private int _dieValue { get; set; } //Property to hold the current die value
+        private static Random _rnd = new Random(); //Random object to generate random numbers
         //Method
 
         /// <summary>
@@ -34,9 +34,9 @@ namespace CMP1903_A1_2324
         public int RollDie() //Method to roll the die taking no parameters and returning an integer
         {
             //roll the die and set the DieValue property to the result
-            DieValue = rnd.Next(1, 7);
-            return DieValue;
+            _dieValue = _rnd.Next(1, 7);
+            return _dieValue;
         }
 
-    }
-}
+        }
+        }
