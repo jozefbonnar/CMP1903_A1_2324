@@ -50,6 +50,8 @@ namespace CMP1903_A1_2324
         {
             int[] statistics = new int[6];
             string input = "";
+            int totalRolls = 0; // Counter for total rolls
+            int totalSum = 0; // Counter for total sum of all rolls
 
             while (input != "exit")
             {
@@ -61,6 +63,7 @@ namespace CMP1903_A1_2324
                 }
 
                 int total = diceValues.Sum(); //sum the values of the dice
+                totalSum += total; //add the total of this roll to the total sum
 
                 Console.WriteLine();
                 Console.WriteLine("The total of the three dice rolls is: " + total);
@@ -70,15 +73,16 @@ namespace CMP1903_A1_2324
                     break;
                 }
                 input = Console.ReadLine();
-
+                totalRolls++; // Increment the counter after each roll
             }
             Console.WriteLine("Statistics of the rolls:");
             for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine("Number of " + (i + 1) + "'s: " + statistics[i]);
             }
+            Console.WriteLine("Total number of rolls: " + totalRolls); // Print the total number of rolls
+            Console.WriteLine("Total sum of all rolls: " + totalSum); // Print the total sum of all rolls
             return statistics;
-
         }
     }
 }
