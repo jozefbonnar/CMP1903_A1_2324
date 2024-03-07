@@ -8,7 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        private List<Die> dice; // List to hold the dice objects
+        private List<Die> _dice; // List to hold the dice objects
 
         /// <summary>
         /// Constructor for the game class
@@ -16,10 +16,10 @@ namespace CMP1903_A1_2324
         /// </summary>
         public Game()
         {
-            dice = new List<Die>(); // Initialize the list of dice
+            _dice = new List<Die>(); // Initialize the list of dice
             for (int i = 0; i < 3; i++)
             {
-                dice.Add(new Die()); // Add three dice to the list
+                _dice.Add(new Die()); // Add three dice to the list
             }
         }
 
@@ -31,9 +31,9 @@ namespace CMP1903_A1_2324
         {
             int[] diceValues = new int[3];
             Console.Write("You rolled a: ");
-            foreach (var die in dice)
+            foreach (var die in _dice)
             {
-                int index = dice.IndexOf(die);
+                int index = _dice.IndexOf(die);
                 diceValues[index] = die.RollDie();
                 Console.Write(diceValues[index] + ", ");
             }
