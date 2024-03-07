@@ -50,7 +50,7 @@ namespace CMP1903_A1_2324
         {
             int[] statistics = new int[6];
             string input = "";
-            int totalRolls = 0; // Counter for total rolls
+            int totalRolls = 1; // Counter for total rolls
             int totalSum = 0; // Counter for total sum of all rolls
 
             while (input != "exit")
